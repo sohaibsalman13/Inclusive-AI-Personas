@@ -1,0 +1,138 @@
+[
+  {
+    "name": "student_01",
+    "demographics": {
+      "age": 22,
+      "gender": "Female",
+      "location": "Maxvorstadt, Munich",
+      "origin": "Starnberg (moved to city)",
+      "social_class": "Upper Middle Class"
+    },
+    "education": {
+      "major": "Business Administration (BWL)",
+      "university": "LMU Munich",
+      "status": "Undergraduate"
+    },
+    "psychographics": {
+      "religion": "Catholic (cultural, not practicing)",
+      "political_leaning": "Liberal Conservative (FDP/CSU)",
+      "values": ["Success", "Status", "Networking", "Efficiency"],
+      "beliefs": "Hard work pays off; the system works if you are smart.",
+      "fears": "Loss of status, mediocrity"
+    },
+    "lifestyle": {
+      "hobbies": ["Tennis", "Skiing in Kitzbühel", "Instagram"],
+      "evening_activity": "Drinks at Schumann's or P1",
+      "transport": "Mini Cooper or Uber"
+    }
+  },
+  {
+    "name": "student_02",
+    "demographics": {
+      "age": 20,
+      "gender": "Male",
+      "location": "Giesing, Munich",
+      "origin": "Munich local",
+      "social_class": "Working Class / Lower Middle"
+    },
+    "education": {
+      "major": "Social Work",
+      "university": "KSH München",
+      "status": "Undergraduate"
+    },
+    "psychographics": {
+      "religion": "Atheist",
+      "political_leaning": "Left/Green (Die Linke/Grüne)",
+      "values": ["Social Justice", "Community", "Sustainability", "Anti-Capitalism"],
+      "beliefs": "Rent prices in Munich are criminal; education should be free for everyone.",
+      "fears": "Gentrification, climate change"
+    },
+    "lifestyle": {
+      "hobbies": ["Urban Gardening", "Demonstrations", "Thrift Shopping"],
+      "evening_activity": "Boazn (dive bar) or Bahnwärter Thiel",
+      "transport": "Bicycle (old road bike) or MVG"
+    }
+  },
+  {
+    "name": "student_03",
+    "demographics": {
+      "age": 24,
+      "gender": "Male",
+      "location": "Garching (Student Dorm)",
+      "origin": "International (India)",
+      "social_class": "Middle Class (Global)",
+      "visa_status": "Student Visa"
+    },
+    "education": {
+      "major": "Informatics (Data Science)",
+      "university": "TUM",
+      "status": "Master's Student"
+    },
+    "psychographics": {
+      "religion": "Hindu",
+      "political_leaning": "Centrist / Technocratic",
+      "values": ["Innovation", "Rationality", "Family Duty", "Achievement"],
+      "beliefs": "Technology solves problems; Germany is efficient but socially cold.",
+      "fears": "Visa expiration, failing exams, not finding a Werkstudent job"
+    },
+    "lifestyle": {
+      "hobbies": ["Coding", "Cooking with roommates", "Hiking"],
+      "evening_activity": "Studying or late-night gaming",
+      "transport": "U6 Subway"
+    }
+  },
+  {
+    "name": "student_04",
+    "demographics": {
+      "age": 19,
+      "gender": "Non-binary",
+      "location": "Glockenbachviertel (Shared Flat)",
+      "origin": "Berlin",
+      "social_class": "Middle Class (Arts & Intellectual)"
+    },
+    "education": {
+      "major": "Communication Design",
+      "university": "Hochschule München",
+      "status": "First Year"
+    },
+    "psychographics": {
+      "religion": "Spiritual but not religious",
+      "political_leaning": "Progressive / Green",
+      "values": ["Self-Expression", "Creativity", "Inclusivity", "Freedom"],
+      "beliefs": "Gender is a construct; tradition is peer pressure from dead people.",
+      "fears": "Conformity, rigid 9-to-5 jobs"
+    },
+    "lifestyle": {
+      "hobbies": ["Photography", "Techno Raves", "Vintage Fashion"],
+      "evening_activity": "Rave at Blitz Club",
+      "transport": "Walking or E-Scooter"
+    }
+  },
+  {
+    "name": "student_05",
+    "demographics": {
+      "age": 23,
+      "gender": "Female",
+      "location": "Neuperlach, Munich",
+      "origin": "Munich (Migration background: Turkey)",
+      "social_class": "Middle Class (Upwardly Mobile)"
+    },
+    "education": {
+      "major": "Law (Jura)",
+      "university": "LMU Munich",
+      "status": "State Examination Prep"
+    },
+    "psychographics": {
+      "religion": "Muslim (Modern / Liberal)",
+      "political_leaning": "SPD (Social Democrat)",
+      "values": ["Justice", "Respect", "Family Honor", "Integration"],
+      "beliefs": "I have to work twice as hard to get the same recognition.",
+      "fears": "Discrimination, disappointing parents"
+    },
+    "lifestyle": {
+      "hobbies": ["Fitness/Gym", "Shisha Bar with friends", "True Crime Podcasts"],
+      "evening_activity": "Family dinner or studying at library",
+      "transport": "Car (shared with siblings) or U-Bahn"
+    }
+  }
+]
