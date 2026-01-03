@@ -1,4 +1,4 @@
  .idea/
-sauerkraut_student.gguf
+sauerkraut.gguf
 *.gguf
 /venv/

@@ -1,36 +1,50 @@
 import json
 import ollama
+import sys
 
 # --- CONFIGURATION ---
-MODEL_NAME = "hf.co/MaziyarPanahi/Llama-3-SauerkrautLM-8b-Instruct-GGUF"
+MODEL_NAME = "sauerkraut"
 JSON_FILE = "personas.json"
 
 
-def load_personas():
+def load_students():
     try:
         with open(JSON_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
-    except Exception as e:
-        print(f" Error loading JSON: {e}")
+    except FileNotFoundError:
+        print(f" Error: Could not find '{JSON_FILE}'.")
+        return None
+    except json.JSONDecodeError:
+        print(f" Error: '{JSON_FILE}' is not valid JSON.")
         return None
 
 
 def main():
-    personas = load_personas()
-    if not personas: return
+    students = load_students()
+    if not students: return
 
     # --- MENU ---
-    print("\n🎓 MUNICH STUDENT CHATBOT 🎓")
-    for i, s in enumerate(personas):
-        print(f"[{i + 1}] {s['name']} - {s['education']['major']}")
+    print("\n MUNICH STUDENT CHATBOT ")
 
-    choice = input("\nEnter number: ")
+    # Display the menu using the nested JSON structure
+    for i, s in enumerate(students):
+        print(f"[{i + 1}] {s['name']} - {s['education']['major']} ({s['demographics']['social_class']})")
+
+    # --- SELECTION ---
     try:
-        selected = personas[int(choice) - 1]
-    except:
+        choice_input = input("\nEnter number (or 'q' to quit): ")
+        if choice_input.lower() == 'q': return
+
+        selected = students[int(choice_input) - 1]
+    except (ValueError, IndexError):
+        print(" Invalid selection. Exiting.")
         return
 
     print(f"\n Chatting with: {selected['name']}")
+    print(f" Location: {selected['demographics']['location']}")
+    print(f" Core Value: {selected['psychographics']['values'][0]}")
+    print("(Type 'exit' to quit)\n")
+
     chat_history = []
 
     # --- CHAT LOOP ---
@@ -38,37 +52,60 @@ def main():
         user_input = input("You: ")
         if user_input.lower() in ["exit", "quit"]: break
 
-        # We inject the Persona Data directly into the prompt (No LoRA needed!)
+        # --- DYNAMIC SYSTEM PROMPT ---
         system_instruction = f"""
-        Du bist ein Student in München. Antworte immer auf Deutsch.
-        Bleib in deiner Rolle!
+        Du bist jetzt genau diese Person. Antworte immer auf Deutsch.
+        Bleib strikt in der Rolle! Falle nicht aus dem Charakter.
 
-        DEIN PROFIL:
+        ### DEIN PROFIL:
         - Name: {selected['name']}
-        - Alter: {selected['demographics']['age']}
-        - Studium: {selected['education']['major']} an der {selected['education']['university']}
-        - Wohnort: {selected['demographics']['location']} ({selected['demographics']['social_class']})
+        - Alter/Geschlecht: {selected['demographics']['age']}, {selected['demographics']['gender']}
+        - Herkunft: {selected['demographics']['origin']} ({selected['demographics']['social_class']})
+        - Wohnort: {selected['demographics']['location']}
+
+        ### AUSBILDUNG:
+        - Studium: {selected['education']['major']} an der {selected['education']['university']} ({selected['education']['status']})
+
+        ### DEINE PSYCHE (WICHTIG):
+        - Politische Einstellung: {selected['psychographics']['political_leaning']}
+        - Werte: {", ".join(selected['psychographics']['values'])}
+        - Glaube/Religion: {selected['psychographics']['religion']}
+        - Tiefe Überzeugung: "{selected['psychographics']['beliefs']}"
+        - Deine Ängste: "{selected['psychographics']['fears']}"
+
+        ### LIFESTYLE:
         - Hobbys: {", ".join(selected['lifestyle']['hobbies'])}
-        - Dein Glaube: "{selected['psychographics']['beliefs']}"
-        - Deine Sprache: Nutze Jugendsprache, "Digga", "Alter", oder Münchner Dialekt wenn passend.
+        - Typischer Abend: {selected['lifestyle']['evening_activity']}
+        - Fortbewegung: {selected['lifestyle']['transport']}
+
+        ### SPRACHSTIL:
+        Sprich wie ein echter Student in München.
+        Nutze Jugendsprache ("Digga", "Safe", "Cringe") oder Münchner Dialekt, wenn es zu deinem Hintergrund passt.
+        Antworte kurz und direkt.
         """
 
-        # Build message history for the model
+        # Build the message chain
         messages = [{'role': 'system', 'content': system_instruction}]
         messages.extend(chat_history)
         messages.append({'role': 'user', 'content': user_input})
 
-        print("...")
+        print("... (thinking)")
 
-        # Send to Ollama
-        response = ollama.chat(model=MODEL_NAME, messages=messages)
-        answer = response['message']['content']
+        try:
+            # Send to Ollama
+            response = ollama.chat(model=MODEL_NAME, messages=messages)
+            answer = response['message']['content']
 
-        print(f"{selected['name']}: {answer}")
+            # Print output
+            print(f"{selected['name']}: {answer}")
 
-        # Update history
-        chat_history.append({'role': 'user', 'content': user_input})
-        chat_history.append({'role': 'assistant', 'content': answer})
+            # Update history
+            chat_history.append({'role': 'user', 'content': user_input})
+            chat_history.append({'role': 'assistant', 'content': answer})
+
+        except Exception as e:
+            print(f" Error: {e}")
+            break
 
 
 if __name__ == "__main__":
