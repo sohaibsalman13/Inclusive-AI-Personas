@@ -1,113 +1,74 @@
 import json
-import subprocess
-import os
+import ollama
 
 # --- CONFIGURATION ---
+MODEL_NAME = "hf.co/MaziyarPanahi/Llama-3-SauerkrautLM-8b-Instruct-GGUF"
 JSON_FILE = "personas.json"
-MODEL_NAME = "sauerkraut"
 
 
 def load_personas():
-    """Reads the external JSON file safely."""
-    if not os.path.exists(JSON_FILE):
-        print(f"Error: Could not find '{JSON_FILE}'")
-        return None
-
     try:
         with open(JSON_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
-    except json.JSONDecodeError:
-        print(f" Error: Your '{JSON_FILE}' has a formatting mistake.")
-        return None
-
-
-def ask_ollama(model, prompt):
-    """Sends prompt to Ollama."""
-    try:
-        process = subprocess.Popen(
-            ['ollama', 'run', model],
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            encoding='utf-8'
-        )
-        stdout, stderr = process.communicate(input=prompt)
-        return stdout.strip()
     except Exception as e:
-        return f"Error connecting to Ollama: {e}"
+        print(f" Error loading JSON: {e}")
+        return None
 
 
 def main():
     personas = load_personas()
-    if not personas:
-        return
+    if not personas: return
 
-    # --- CHOOSE CHARACTER ---
-    print("\n AI PERSONAS CHATBOT")
-    print(f"Loaded {len(personas)} personas from {JSON_FILE}\n")
-
+    # --- MENU ---
+    print("\n🎓 MUNICH STUDENT CHATBOT 🎓")
     for i, s in enumerate(personas):
         print(f"[{i + 1}] {s['name']} - {s['education']['major']}")
 
     choice = input("\nEnter number: ")
-
     try:
         selected = personas[int(choice) - 1]
-    except (ValueError, IndexError):
-        print("Invalid choice. Exiting.")
+    except:
         return
 
     print(f"\n Chatting with: {selected['name']}")
-    print(f" From: {selected['demographics']['location']}")
-    print("(Type 'exit' to quit)\n")
+    chat_history = []
 
-    # --- START CHAT ---
-    chat_history = ""
-
+    # --- CHAT LOOP ---
     while True:
         user_input = input("You: ")
-        if user_input.lower() in ["exit", "quit"]:
-            break
+        if user_input.lower() in ["exit", "quit"]: break
 
-        # --- BUILD THE DEEP PROMPT ---
-        prompt = f"""
-            Act strictly as this specific student in Munich.
+        # We inject the Persona Data directly into the prompt (No LoRA needed!)
+        system_instruction = f"""
+        Du bist ein Student in München. Antworte immer auf Deutsch.
+        Bleib in deiner Rolle!
 
-            ### YOUR PROFILE:
-            - Name: {selected['name']}
-            - Age/Gender: {selected['demographics']['age']}, {selected['demographics']['gender']}
-            - Social Class: {selected['demographics']['social_class']}
-            - Major: {selected['education']['major']} ({selected['education']['university']})
-            - Political Leaning: {selected['psychographics']['political_leaning']}
-            - Core Values: {", ".join(selected['psychographics']['values'])}
-            - Deepest Belief: "{selected['psychographics']['beliefs']}"
-            - Secret Fear: "{selected['psychographics']['fears']}"
-            - Typical Evening: {selected['lifestyle']['evening_activity']}
+        DEIN PROFIL:
+        - Name: {selected['name']}
+        - Alter: {selected['demographics']['age']}
+        - Studium: {selected['education']['major']} an der {selected['education']['university']}
+        - Wohnort: {selected['demographics']['location']} ({selected['demographics']['social_class']})
+        - Hobbys: {", ".join(selected['lifestyle']['hobbies'])}
+        - Dein Glaube: "{selected['psychographics']['beliefs']}"
+        - Deine Sprache: Nutze Jugendsprache, "Digga", "Alter", oder Münchner Dialekt wenn passend.
+        """
 
-            ### CONVERSATION HISTORY:
-            {chat_history}
+        # Build message history for the model
+        messages = [{'role': 'system', 'content': system_instruction}]
+        messages.extend(chat_history)
+        messages.append({'role': 'user', 'content': user_input})
 
-            ### CURRENT MESSAGE:
-            User: {user_input}
-            You (Reply in character, Keep it short & conversational):
-            """
+        print("...")
 
-        print("... (Thinking) ...")
+        # Send to Ollama
+        response = ollama.chat(model=MODEL_NAME, messages=messages)
+        answer = response['message']['content']
 
-        response = ask_ollama(MODEL_NAME, prompt)
+        print(f"{selected['name']}: {answer}")
 
-        # CHECK FOR EMPTY RESPONSES
-        if not response:
-            print(" Error: The model returned nothing. Is Ollama running?")
-            continue
-
-        # Clean up output (remove "Name:" if the model accidentally types it)
-        clean_response = response.replace(f"{selected['name']}:", "").strip()
-
-        print(f"{selected['name']}: {clean_response}")
-
-        chat_history += f"User: {user_input}\nYou: {clean_response}\n"
+        # Update history
+        chat_history.append({'role': 'user', 'content': user_input})
+        chat_history.append({'role': 'assistant', 'content': answer})
 
 
 if __name__ == "__main__":
