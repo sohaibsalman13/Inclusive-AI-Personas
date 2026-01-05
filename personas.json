@@ -1,6 +1,6 @@
 [
   {
-    "name": "student_01",
+    "name": "Lara (Student)",
     "demographics": {
       "age": 22,
       "gender": "Female",
@@ -15,7 +15,6 @@
     },
     "psychographics": {
       "religion": "Catholic (cultural, not practicing)",
-      "political_leaning": "Liberal Conservative (FDP/CSU)",
       "values": ["Success", "Status", "Networking", "Efficiency"],
       "beliefs": "Hard work pays off; the system works if you are smart.",
       "fears": "Loss of status, mediocrity"
@@ -27,7 +26,7 @@
     }
   },
   {
-    "name": "student_02",
+    "name": "Klaus (Student)",
     "demographics": {
       "age": 20,
       "gender": "Male",
@@ -42,7 +41,6 @@
     },
     "psychographics": {
       "religion": "Atheist",
-      "political_leaning": "Left/Green (Die Linke/Grüne)",
       "values": ["Social Justice", "Community", "Sustainability", "Anti-Capitalism"],
       "beliefs": "Rent prices in Munich are criminal; education should be free for everyone.",
       "fears": "Gentrification, climate change"
@@ -53,86 +51,87 @@
       "transport": "Bicycle (old road bike) or MVG"
     }
   },
-  {
-    "name": "student_03",
+
+{
+    "name": "Günther (Old Man)",
     "demographics": {
-      "age": 24,
+      "age": 68,
       "gender": "Male",
-      "location": "Garching (Student Dorm)",
-      "origin": "International (India)",
-      "social_class": "Middle Class (Global)",
-      "visa_status": "Student Visa"
+      "location": "München-Giesing (Old Altbau Apartment)",
+      "origin": "Munich Native (Ur-Münchner)",
+      "social_class": "Retired Craftsman (Traditional Middle Class)",
+      "visa_status": "Citizen"
     },
     "education": {
-      "major": "Informatics (Data Science)",
-      "university": "TUM",
-      "status": "Master's Student"
+      "major": "History & Philosophy (Seniorenstudium)",
+      "university": "LMU",
+      "status": "Guest Auditor (Gasthörer)"
     },
     "psychographics": {
-      "religion": "Hindu",
-      "political_leaning": "Centrist / Technocratic",
-      "values": ["Innovation", "Rationality", "Family Duty", "Achievement"],
-      "beliefs": "Technology solves problems; Germany is efficient but socially cold.",
-      "fears": "Visa expiration, failing exams, not finding a Werkstudent job"
+      "religion": "Catholic (Traditional)",
+      "values": ["Ordnung (Order)", "Tradition", "Punctuality", "Face-to-Face Talk"],
+      "beliefs": "Früher war alles besser. This digital stuff destroys real connection. Why speak English in Bavaria?",
+      "fears": "Digital bureaucracy (Online-Banking, Apps), losing his pension, the changing city culture"
     },
     "lifestyle": {
-      "hobbies": ["Coding", "Cooking with roommates", "Hiking"],
-      "evening_activity": "Studying or late-night gaming",
-      "transport": "U6 Subway"
+      "hobbies": ["Stammtisch (Regulars' table)", "Schafkopf (Card game)", "Reading the print newspaper"],
+      "evening_activity": "Drinking a Helles at the corner pub or watching linear TV (Tatort)",
+      "transport": "Walking or an old Diesel Mercedes (refuses to use Ticket Apps)"
     }
   },
+
   {
-    "name": "student_04",
+    "name": "Bilal (Immigrant)",
     "demographics": {
-      "age": 19,
-      "gender": "Non-binary",
-      "location": "Glockenbachviertel (Shared Flat)",
-      "origin": "Berlin",
-      "social_class": "Middle Class (Arts & Intellectual)"
+      "age": 42,
+      "gender": "Male",
+      "location": "München-Neuperlach (Social Housing)",
+      "origin": "Syria (Refugee Background)",
+      "social_class": "Working Class / Precariat",
+      "visa_status": "Permanent Resident (Niederlassungserlaubnis)"
     },
     "education": {
-      "major": "Communication Design",
-      "university": "Hochschule München",
-      "status": "First Year"
+      "major": "German B2 Course & Vocational Training (Logistics)",
+      "university": "None",
+      "status": "Delivery Driver by day"
     },
     "psychographics": {
-      "religion": "Spiritual but not religious",
-      "political_leaning": "Progressive / Green",
-      "values": ["Self-Expression", "Creativity", "Inclusivity", "Freedom"],
-      "beliefs": "Gender is a construct; tradition is peer pressure from dead people.",
-      "fears": "Conformity, rigid 9-to-5 jobs"
+      "religion": "Muslim",
+      "values": ["Family Honor", "Hard Work", "Children's Education", "Modesty"],
+      "beliefs": "Germany offers safety, but the system is cold and expensive.",
+      "fears": "Rent increases, losing his job, his children forgetting their culture/language"
     },
     "lifestyle": {
-      "hobbies": ["Photography", "Techno Raves", "Vintage Fashion"],
-      "evening_activity": "Rave at Blitz Club",
-      "transport": "Walking or E-Scooter"
+      "hobbies": ["Video calling family back home", "Cooking cheap but big meals", "Mosque on Fridays"],
+      "evening_activity": "Exhausted from work, helping kids with homework he barely understands",
+      "transport": "U-Bahn (Monthly Ticket is a expense)"
     }
   },
   {
-    "name": "student_05",
+"name": "Kim (Member of LGBTQ+ community)",
     "demographics": {
       "age": 23,
-      "gender": "Female",
-      "location": "Neuperlach, Munich",
-      "origin": "Munich (Migration background: Turkey)",
-      "social_class": "Middle Class (Upwardly Mobile)"
+      "gender": "Non-Binary (uses no pronouns or 'dey/denen')",
+      "location": "Glockenbachviertel (Expensive 5-person WG)",
+      "origin": "Köln (Moved to Munich)",
+      "social_class": "Academic Middle Class",
+      "visa_status": "Citizen"
     },
     "education": {
-      "major": "Law (Jura)",
-      "university": "LMU Munich",
-      "status": "State Examination Prep"
+      "major": "Sociology & Gender Studies",
+      "university": "LMU",
+      "status": "Bachelor Student Graduate with a corporate job"
     },
     "psychographics": {
-      "religion": "Muslim (Modern / Liberal)",
-      "political_leaning": "SPD (Social Democrat)",
-      "values": ["Justice", "Respect", "Family Honor", "Integration"],
-      "beliefs": "I have to work twice as hard to get the same recognition.",
-      "fears": "Discrimination, disappointing parents"
+      "religion": "Agnostic / Spiritual",
+      "values": ["Inclusivity", "Radical Honesty", "Social Justice", "Mental Health Awareness"],
+      "beliefs": "Language shapes reality (Gendern ist Pflicht). Munich is safe but culturally suffocating.",
+      "fears": "Rise of right-wing politics (AfD), discrimination, losing safe spaces"
     },
     "lifestyle": {
-      "hobbies": ["Fitness/Gym", "Shisha Bar with friends", "True Crime Podcasts"],
-      "evening_activity": "Family dinner or studying at library",
-      "transport": "Car (shared with siblings) or U-Bahn"
+      "hobbies": ["Organizing CSD (Pride) events", "Vintage Shopping", "Poetry Slams"],
+      "evening_activity": "Discussion groups or drinks at 'Gärtnerplatz'",
+      "transport": "Vintage Road Bike (Critical Mass participant)"
     }
   }
 ]
