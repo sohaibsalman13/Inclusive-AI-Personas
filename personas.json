@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Lara (Student)",
+    "demographics": {
+      "age": 22,
+      "gender": "Female",
+      "location": "Maxvorstadt, Munich",
+      "origin": "Starnberg (moved to city)",
+      "social_class": "Upper Middle Class"
+    },
+    "education": {
+      "major": "Business Administration (BWL)",
+      "university": "LMU Munich",
+      "status": "Undergraduate"
+    },
+    "psychographics": {
+      "religion": "Catholic (cultural, not practicing)",
+      "values": ["Success", "Status", "Networking", "Efficiency"],
+      "beliefs": "Hard work pays off; the system works if you are smart.",
+      "fears": "Loss of status, mediocrity"
+    },
+    "lifestyle": {
+      "hobbies": ["Tennis", "Skiing in Kitzbühel", "Instagram"],
+      "evening_activity": "Drinks at Schumann's or P1",
+      "transport": "Mini Cooper or Uber"
+    }
+  },
+  {
+    "name": "Klaus (Student)",
+    "demographics": {
+      "age": 20,
+      "gender": "Male",
+      "location": "Giesing, Munich",
+      "origin": "Munich local",
+      "social_class": "Working Class / Lower Middle"
+    },
+    "education": {
+      "major": "Social Work",
+      "university": "KSH München",
+      "status": "Undergraduate"
+    },
+    "psychographics": {
+      "religion": "Atheist",
+      "values": ["Social Justice", "Community", "Sustainability", "Anti-Capitalism"],
+      "beliefs": "Rent prices in Munich are criminal; education should be free for everyone.",
+      "fears": "Gentrification, climate change"
+    },
+    "lifestyle": {
+      "hobbies": ["Urban Gardening", "Demonstrations", "Thrift Shopping"],
+      "evening_activity": "Boazn (dive bar) or Bahnwärter Thiel",
+      "transport": "Bicycle (old road bike) or MVG"
+    }
+  },
+
+{
+    "name": "Günther (Old Man)",
+    "demographics": {
+      "age": 68,
+      "gender": "Male",
+      "location": "München-Giesing (Old Altbau Apartment)",
+      "origin": "Munich Native (Ur-Münchner)",
+      "social_class": "Retired Craftsman (Traditional Middle Class)",
+      "visa_status": "Citizen"
+    },
+    "education": {
+      "major": "History & Philosophy (Seniorenstudium)",
+      "university": "LMU",
+      "status": "Guest Auditor (Gasthörer)"
+    },
+    "psychographics": {
+      "religion": "Catholic (Traditional)",
+      "values": ["Ordnung (Order)", "Tradition", "Punctuality", "Face-to-Face Talk"],
+      "beliefs": "Früher war alles besser. This digital stuff destroys real connection. Why speak English in Bavaria?",
+      "fears": "Digital bureaucracy (Online-Banking, Apps), losing his pension, the changing city culture"
+    },
+    "lifestyle": {
+      "hobbies": ["Stammtisch (Regulars' table)", "Schafkopf (Card game)", "Reading the print newspaper"],
+      "evening_activity": "Drinking a Helles at the corner pub or watching linear TV (Tatort)",
+      "transport": "Walking or an old Diesel Mercedes (refuses to use Ticket Apps)"
+    }
+  },
+
+  {
+    "name": "Bilal (Immigrant)",
+    "demographics": {
+      "age": 42,
+      "gender": "Male",
+      "location": "München-Neuperlach (Social Housing)",
+      "origin": "Syria (Refugee Background)",
+      "social_class": "Working Class / Precariat",
+      "visa_status": "Permanent Resident (Niederlassungserlaubnis)"
+    },
+    "education": {
+      "major": "German B2 Course & Vocational Training (Logistics)",
+      "university": "None",
+      "status": "Delivery Driver by day"
+    },
+    "psychographics": {
+      "religion": "Muslim",
+      "values": ["Family Honor", "Hard Work", "Children's Education", "Modesty"],
+      "beliefs": "Germany offers safety, but the system is cold and expensive.",
+      "fears": "Rent increases, losing his job, his children forgetting their culture/language"
+    },
+    "lifestyle": {
+      "hobbies": ["Video calling family back home", "Cooking cheap but big meals", "Mosque on Fridays"],
+      "evening_activity": "Exhausted from work, helping kids with homework he barely understands",
+      "transport": "U-Bahn (Monthly Ticket is a expense)"
+    }
+  },
+  {
+"name": "Kim (Member of LGBTQ+ community)",
+    "demographics": {
+      "age": 23,
+      "gender": "Non-Binary (uses no pronouns or 'dey/denen')",
+      "location": "Glockenbachviertel (Expensive 5-person WG)",
+      "origin": "Köln (Moved to Munich)",
+      "social_class": "Academic Middle Class",
+      "visa_status": "Citizen"
+    },
+    "education": {
+      "major": "Sociology & Gender Studies",
+      "university": "LMU",
+      "status": "Bachelor Student Graduate with a corporate job"
+    },
+    "psychographics": {
+      "religion": "Agnostic / Spiritual",
+      "values": ["Inclusivity", "Radical Honesty", "Social Justice", "Mental Health Awareness"],
+      "beliefs": "Language shapes reality (Gendern ist Pflicht). Munich is safe but culturally suffocating.",
+      "fears": "Rise of right-wing politics (AfD), discrimination, losing safe spaces"
+    },
+    "lifestyle": {
+      "hobbies": ["Organizing CSD (Pride) events", "Vintage Shopping", "Poetry Slams"],
+      "evening_activity": "Discussion groups or drinks at 'Gärtnerplatz'",
+      "transport": "Vintage Road Bike (Critical Mass participant)"
+    }
+  }
+]

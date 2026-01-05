@@ -1,0 +1,4 @@
+ .idea/
+sauerkraut.gguf
+*.gguf
+/venv/
