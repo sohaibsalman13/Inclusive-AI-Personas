@@ -6,53 +6,14 @@ import sys
 MODEL_NAME = "sauerkraut"
 JSON_FILE = "personas.json"
 
-
 def load_students():
     try:
         with open(JSON_FILE, 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
-        print(f" Error: Could not find '{JSON_FILE}'.")
-        return None
-    except json.JSONDecodeError:
-        print(f" Error: '{JSON_FILE}' is not valid JSON.")
-        return None
+        return []
 
-
-def get_response():
-    students = load_students()
-    if not students: return
-
-    # --- MENU ---
-    print("\n MUNICH STUDENT CHATBOT ")
-
-    # Display the menu using the nested JSON structure
-    for i, s in enumerate(students):
-        print(f"[{i + 1}] {s['name']} - {s['education']['major']} ({s['demographics']['social_class']})")
-
-    # --- SELECTION ---
-    try:
-        choice_input = input("\nEnter number (or 'q' to quit): ")
-        if choice_input.lower() == 'q': return
-
-        selected = students[int(choice_input) - 1]
-    except (ValueError, IndexError):
-        print(" Invalid selection. Exiting.")
-        return
-
-    print(f"\n Chatting with: {selected['name']}")
-    print(f" Location: {selected['demographics']['location']}")
-    print(f" Core Value: {selected['psychographics']['values'][0]}")
-    print("(Type 'exit' to quit)\n")
-
-    chat_history = []
-
-    # --- CHAT LOOP ---
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() in ["exit", "quit"]: break
-
-        # --- DYNAMIC SYSTEM PROMPT ---
+def get_response(selected, user_input, chat_history):
         system_instruction = f"""
         Du bist jetzt diese Person. Antworte immer auf Deutsch.
         Bleibe strikt in deiner Rolle! Brich nicht aus deiner Rolle aus.
@@ -88,23 +49,12 @@ def get_response():
         messages.extend(chat_history)
         messages.append({'role': 'user', 'content': user_input})
 
-        print("... (thinking)")
+        print("(thinking)")
 
         try:
-            # Send to Ollama
             response = ollama.chat(model=MODEL_NAME, messages=messages)
-            answer = response['message']['content']
-
-            # Print output
-            print(f"{selected['name']}: {answer}")
-
-            # Update history
-            chat_history.append({'role': 'user', 'content': user_input})
-            chat_history.append({'role': 'assistant', 'content': answer})
-
+            return response['message']['content']
         except Exception as e:
-            print(f" Error: {e}")
-            break
-
+            return f"Error: {e}"
 
 
