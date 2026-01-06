@@ -2,8 +2,8 @@ import streamlit as st
 import model
 
 # --- PAGE SETUP ---
-st.set_page_config(page_title="Munich Student Bot", page_icon="🎓", layout="wide")
-st.title(" Munich Student Chatbot")
+st.set_page_config(page_title="AI Personas Bot", page_icon="🎓", layout="wide")
+st.title("AI Personas Chatbot")
 
 # --- SIDEBAR: SELECT STUDENT ---
 students = model.load_students()
@@ -15,8 +15,8 @@ if not students:
 st.sidebar.header("Select Persona")
 
 # Create a list of names for the dropdown
-student_names = [s['name'] + " (" + s['education']['major'] + ")" for s in students]
-selected_index = st.sidebar.selectbox("Choose a student:", range(len(student_names)),
+student_names = [s['name'] for s in students]
+selected_index = st.sidebar.selectbox("Choose a persona:", range(len(student_names)),
                                       format_func=lambda x: student_names[x])
 selected_persona = students[selected_index]
 
@@ -25,7 +25,6 @@ st.sidebar.divider()
 st.sidebar.subheader(f" {selected_persona['name']}")
 st.sidebar.write(f"**Age:** {selected_persona['demographics']['age']}")
 st.sidebar.write(f"**Origin:** {selected_persona['demographics']['origin']}")
-st.sidebar.info(f" **Belief:** \"{selected_persona['psychographics']['beliefs']}\"")
 
 # --- CHAT INTERFACE ---
 
