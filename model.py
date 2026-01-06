@@ -19,7 +19,7 @@ def load_students():
         return None
 
 
-def main():
+def get_response():
     students = load_students()
     if not students: return
 
@@ -106,8 +106,5 @@ def main():
             print(f" Error: {e}")
             break
 
-
-if __name__ == "__main__":
-    main()
 
 
