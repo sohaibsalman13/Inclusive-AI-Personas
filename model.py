@@ -1,10 +1,11 @@
 import json
 import ollama
-import sys
+import modal
 
 # --- CONFIGURATION ---
-MODEL_NAME = "sauerkraut"
+# MODEL_NAME = "sauerkraut"
 JSON_FILE = "personas.json"
+f = modal.Cls.from_name("munich-student-bot", "Model")
 
 def load_students():
     try:
@@ -51,17 +52,23 @@ def get_response(selected, user_input, chat_history):
         Antworte kurz und direkt.
         """
 
-        # Build the message chain
-        messages = [{'role': 'system', 'content': system_instruction}]
-        messages.extend(chat_history)
-        messages.append({'role': 'user', 'content': user_input})
+        # 2. Build Prompt Manually (vLLM expects raw text string, not a list of dicts)
+        full_prompt = system_instruction
 
-        print("(thinking)")
+        # Add History
+        for msg in chat_history[-6:]:
+            role = "user" if msg['role'] == "user" else "assistant"
+            full_prompt += f"<|start_header_id|>{role}<|end_header_id|>\n\n{msg['content']}<|eot_id|>"
 
+        # Add Current Input
+        full_prompt += f"<|start_header_id|>user<|end_header_id|>\n\n{user_input}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+
+        # 3. Call the Cloud GPU
         try:
-            response = ollama.chat(model=MODEL_NAME, messages=messages)
-            return response['message']['content']
+            # This sends the data to the cloud and waits for the answer
+            response_text = f().generate_text.remote(full_prompt)
+            return response_text
         except Exception as e:
-            return f"Error: {e}"
+            return f"Cloud Error: {e}"
 
 
