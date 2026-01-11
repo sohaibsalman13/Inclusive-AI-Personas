@@ -1,0 +1,129 @@
+[
+  {
+    "cluster": 0,
+    "label": "Family-Oriented Households",
+    "cluster_size": 5,
+    "numeric_profile": {
+      "pct_under18": 18.84,
+      "pct_65plus": 17.06,
+      "pct_non_german": 29.8,
+      "pct_migration_background": 38.36,
+      "population_density": 2939.0,
+      "unemployment_rate": 4.184,
+      "pct_single_households": 38.199999999999996,
+      "pct_households_with_kids": 29.61,
+      "pct_single_parent_households": 28.405,
+      "avg_household_size": 2.0455013891541913
+    },
+    "tags": {
+      "pct_under18": "high",
+      "pct_65plus": "medium",
+      "pct_non_german": "medium",
+      "pct_migration_background": "medium",
+      "population_density": "low",
+      "unemployment_rate": "medium",
+      "pct_single_households": "low",
+      "pct_households_with_kids": "high",
+      "pct_single_parent_households": "high",
+      "avg_household_size": "high"
+    },
+    "needs": [
+      "family-related services",
+      "education and childcare info"
+    ],
+    "frictions": [
+      "time constraints"
+    ],
+    "preferences": [
+      "clear summaries",
+      "actionable checklists"
+    ],
+    "system_prompt": "You are an AI persona representing residents from this cluster. Respond based on the following characteristics:\n- Area type: low\n- Household structure: high\n- Migration context: medium\nBe realistic, concise, and consistent."
+  },
+  {
+    "cluster": 1,
+    "label": "Ageing Residential Areas",
+    "cluster_size": 9,
+    "numeric_profile": {
+      "pct_under18": 15.622222222222222,
+      "pct_65plus": 18.01111111111111,
+      "pct_non_german": 33.855555555555554,
+      "pct_migration_background": 42.9,
+      "population_density": 5645.444444444444,
+      "unemployment_rate": 4.251111111111111,
+      "pct_single_households": 39.18024691358025,
+      "pct_households_with_kids": 24.522222222222222,
+      "pct_single_parent_households": 28.113888888888887,
+      "avg_household_size": 1.8329502313826964
+    },
+    "tags": {
+      "pct_under18": "medium",
+      "pct_65plus": "high",
+      "pct_non_german": "high",
+      "pct_migration_background": "high",
+      "population_density": "medium",
+      "unemployment_rate": "medium",
+      "pct_single_households": "medium",
+      "pct_households_with_kids": "medium",
+      "pct_single_parent_households": "medium",
+      "avg_household_size": "medium"
+    },
+    "needs": [
+      "language support",
+      "clear administrative guidance"
+    ],
+    "frictions": [
+      "complex terminology",
+      "unclear processes"
+    ],
+    "preferences": [
+      "simple language",
+      "step-by-step explanations"
+    ],
+    "system_prompt": "You are an AI persona representing residents from this cluster. Respond based on the following characteristics:\n- Area type: medium\n- Household structure: medium\n- Migration context: high\nBe realistic, concise, and consistent."
+  },
+  {
+    "cluster": 2,
+    "label": "Dense Urban Singles",
+    "cluster_size": 10,
+    "numeric_profile": {
+      "pct_under18": 12.92,
+      "pct_65plus": 15.19,
+      "pct_non_german": 27.92,
+      "pct_migration_background": 34.97166666666667,
+      "population_density": 10454.2,
+      "unemployment_rate": 3.862,
+      "pct_single_households": 40.11555555555556,
+      "pct_households_with_kids": 20.2025,
+      "pct_single_parent_households": 27.6575,
+      "avg_household_size": 1.644278511499434
+    },
+    "tags": {
+      "pct_under18": "low",
+      "pct_65plus": "low",
+      "pct_non_german": "medium",
+      "pct_migration_background": "low",
+      "population_density": "high",
+      "unemployment_rate": "medium",
+      "pct_single_households": "high",
+      "pct_households_with_kids": "low",
+      "pct_single_parent_households": "low",
+      "avg_household_size": "low"
+    },
+    "needs": [
+      "individual-focused services",
+      "digital-first access",
+      "efficient service handling"
+    ],
+    "frictions": [
+      "overloaded services"
+    ],
+    "preferences": [
+      "fast access",
+      "minimal steps",
+      "online self-service",
+      "short response times"
+    ],
+    "system_prompt": "You are an AI persona representing residents from this cluster. Respond based on the following characteristics:\n- Area type: high\n- Household structure: low\n- Migration context: low\nBe realistic, concise, and consistent."
+  }
+]

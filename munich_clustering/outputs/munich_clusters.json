@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "source": "Munich Open Data Portal (Indikatorenatlas)",
+    "year": 2024,
+    "kmeans": {
+      "k_chosen": 2,
+      "min_cluster_size_constraint": 3,
+      "k_search_range": [
+        2,
+        10
+      ]
+    }
+  },
+  "k_selection_report": [
+    {
+      "k": 2,
+      "silhouette": 0.31561170979537534,
+      "min_cluster_size": 10,
+      "valid": true
+    },
+    {
+      "k": 3,
+      "silhouette": 0.274183490555491,
+      "min_cluster_size": 6,
+      "valid": true
+    },
+    {
+      "k": 4,
+      "silhouette": 0.2519435594533262,
+      "min_cluster_size": 4,
+      "valid": true
+    },
+    {
+      "k": 5,
+      "silhouette": 0.2670501645016585,
+      "min_cluster_size": 3,
+      "valid": true
+    },
+    {
+      "k": 6,
+      "silhouette": 0.27379622298302037,
+      "min_cluster_size": 1,
+      "valid": false
+    },
+    {
+      "k": 7,
+      "silhouette": 0.2910267414777082,
+      "min_cluster_size": 1,
+      "valid": false
+    },
+    {
+      "k": 8,
+      "silhouette": 0.3143575813512699,
+      "min_cluster_size": 1,
+      "valid": false
+    },
+    {
+      "k": 9,
+      "silhouette": 0.29999253462716213,
+      "min_cluster_size": 1,
+      "valid": false
+    },
+    {
+      "k": 10,
+      "silhouette": 0.29863484548427605,
+      "min_cluster_size": 1,
+      "valid": false
+    }
+  ],
+  "cluster_summaries": [
+    {
+      "cluster": 0,
+      "size": 10,
+      "centroid_features": {
+        "pct_under18": 12.89,
+        "pct_65plus": 14.76,
+        "pct_non_german": 27.68
+      }
+    },
+    {
+      "cluster": 1,
+      "size": 15,
+      "centroid_features": {
+        "pct_under18": 16.493333333333332,
+        "pct_65plus": 17.9,
+        "pct_non_german": 32.02
+      }
+    }
+  ],
+  "districts": [
+    {
+      "district": "01 Altstadt - Lehel",
+      "year": 2024,
+      "features": {
+        "pct_under18": 11.8,
+        "pct_65plus": 16.0,
+        "pct_non_german": 25.3
+      },
+      "cluster": 0
+    },
+    {
+      "district": "02 Ludwigsvorstadt - Isarvorstadt",
+      "year": 2024,
+      "features": {
+        "pct_under18": 11.3,
+        "pct_65plus": 12.1,
+        "pct_non_german": 26.5
+      },
+      "cluster": 0
+    },
+    {
+      "district": "03 Maxvorstadt",
+      "year": 2024,
+      "features": {
+        "pct_under18": 10.2,
+        "pct_65plus": 12.0,
+        "pct_non_german": 26.8
+      },
+      "cluster": 0
+    },
+    {
+      "district": "04 Schwabing - West",
+      "year": 2024,
+      "features": {
+        "pct_under18": 12.3,
+        "pct_65plus": 16.8,
+        "pct_non_german": 24.2
+      },
+      "cluster": 0
+    },
+    {
+      "district": "05 Au - Haidhausen",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.1,
+        "pct_65plus": 14.5,
+        "pct_non_german": 23.9
+      },
+      "cluster": 0
+    },
+    {
+      "district": "06 Sendling",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.1,
+        "pct_65plus": 14.9,
+        "pct_non_german": 28.0
+      },
+      "cluster": 0
+    },
+    {
+      "district": "08 Schwanthalerhöhe",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.1,
+        "pct_65plus": 13.1,
+        "pct_non_german": 32.0
+      },
+      "cluster": 0
+    },
+    {
+      "district": "09 Neuhausen - Nymphenburg",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.8,
+        "pct_65plus": 16.8,
+        "pct_non_german": 26.5
+      },
+      "cluster": 0
+    },
+    {
+      "district": "12 Schwabing - Freimann",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.4,
+        "pct_65plus": 16.0,
+        "pct_non_german": 30.8
+      },
+      "cluster": 0
+    },
+    {
+      "district": "17 Obergiesing - Fasangarten",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.8,
+        "pct_65plus": 15.4,
+        "pct_non_german": 32.8
+      },
+      "cluster": 0
+    },
+    {
+      "district": "07 Sendling - Westpark",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.8,
+        "pct_65plus": 17.5,
+        "pct_non_german": 31.5
+      },
+      "cluster": 1
+    },
+    {
+      "district": "10 Moosach",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.6,
+        "pct_65plus": 17.9,
+        "pct_non_german": 34.8
+      },
+      "cluster": 1
+    },
+    {
+      "district": "11 Milbertshofen - Am Hart",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.0,
+        "pct_65plus": 15.3,
+        "pct_non_german": 43.6
+      },
+      "cluster": 1
+    },
+    {
+      "district": "13 Bogenhausen",
+      "year": 2024,
+      "features": {
+        "pct_under18": 16.8,
+        "pct_65plus": 19.2,
+        "pct_non_german": 29.1
+      },
+      "cluster": 1
+    },
+    {
+      "district": "14 Berg am Laim",
+      "year": 2024,
+      "features": {
+        "pct_under18": 16.0,
+        "pct_65plus": 16.8,
+        "pct_non_german": 35.1
+      },
+      "cluster": 1
+    },
+    {
+      "district": "15 Trudering - Riem",
+      "year": 2024,
+      "features": {
+        "pct_under18": 19.0,
+        "pct_65plus": 16.0,
+        "pct_non_german": 25.6
+      },
+      "cluster": 1
+    },
+    {
+      "district": "16 Ramersdorf - Perlach",
+      "year": 2024,
+      "features": {
+        "pct_under18": 17.1,
+        "pct_65plus": 19.4,
+        "pct_non_german": 36.5
+      },
+      "cluster": 1
+    },
+    {
+      "district": "18 Untergiesing - Harlaching",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.0,
+        "pct_65plus": 18.9,
+        "pct_non_german": 25.7
+      },
+      "cluster": 1
+    },
+    {
+      "district": "19 Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.8,
+        "pct_65plus": 19.2,
+        "pct_non_german": 31.5
+      },
+      "cluster": 1
+    },
+    {
+      "district": "20 Hadern",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.1,
+        "pct_65plus": 20.8,
+        "pct_non_german": 31.8
+      },
+      "cluster": 1
+    },
+    {
+      "district": "21 Pasing - Obermenzing",
+      "year": 2024,
+      "features": {
+        "pct_under18": 17.3,
+        "pct_65plus": 18.4,
+        "pct_non_german": 26.7
+      },
+      "cluster": 1
+    },
+    {
+      "district": "22 Aubing - Lochhausen - Langwied",
+      "year": 2024,
+      "features": {
+        "pct_under18": 21.0,
+        "pct_65plus": 15.5,
+        "pct_non_german": 34.6
+      },
+      "cluster": 1
+    },
+    {
+      "district": "23 Allach - Untermenzing",
+      "year": 2024,
+      "features": {
+        "pct_under18": 18.9,
+        "pct_65plus": 17.6,
+        "pct_non_german": 26.9
+      },
+      "cluster": 1
+    },
+    {
+      "district": "24 Feldmoching - Hasenbergl",
+      "year": 2024,
+      "features": {
+        "pct_under18": 18.0,
+        "pct_65plus": 17.8,
+        "pct_non_german": 35.2
+      },
+      "cluster": 1
+    },
+    {
+      "district": "25 Laim",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.0,
+        "pct_65plus": 18.2,
+        "pct_non_german": 31.7
+      },
+      "cluster": 1
+    }
+  ]
+}
