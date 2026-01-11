@@ -1,0 +1,544 @@
+{
+  "metadata": {
+    "source": "Munich Open Data Portal (Indikatorenatlas + privathaushalte snapshot)",
+    "year": 2024,
+    "kmeans": {
+      "k_chosen": 3,
+      "min_cluster_size_constraint": 3,
+      "k_search_range": [
+        2,
+        6
+      ],
+      "fiveplus_bucket_value": 5.0,
+      "silhouette_sample_max": 10
+    }
+  },
+  "k_selection_report": [
+    {
+      "k": 2,
+      "silhouette": 0.28242275504638253,
+      "min_cluster_size": 11,
+      "valid": true
+    },
+    {
+      "k": 3,
+      "silhouette": 0.3342012951542517,
+      "min_cluster_size": 5,
+      "valid": true
+    },
+    {
+      "k": 4,
+      "silhouette": 0.2993456970433414,
+      "min_cluster_size": 4,
+      "valid": true
+    },
+    {
+      "k": 5,
+      "silhouette": 0.2993456970433414,
+      "min_cluster_size": 4,
+      "valid": true
+    },
+    {
+      "k": 6,
+      "silhouette": 0.2993456970433414,
+      "min_cluster_size": 2,
+      "valid": false
+    }
+  ],
+  "feature_columns": [
+    "pct_under18",
+    "pct_65plus",
+    "pct_non_german",
+    "pct_migration_background",
+    "population_density",
+    "unemployment_rate",
+    "pct_single_households",
+    "pct_households_with_kids",
+    "pct_single_parent_households",
+    "avg_household_size"
+  ],
+  "cluster_summaries": [
+    {
+      "cluster": 0,
+      "size": 5,
+      "centroid_features": {
+        "pct_under18": 18.84,
+        "pct_65plus": 17.06,
+        "pct_non_german": 29.8,
+        "pct_migration_background": 38.36,
+        "population_density": 2939.0,
+        "unemployment_rate": 4.184,
+        "pct_single_households": 38.199999999999996,
+        "pct_households_with_kids": 29.61,
+        "pct_single_parent_households": 28.405,
+        "avg_household_size": 2.0455013891541913
+      }
+    },
+    {
+      "cluster": 1,
+      "size": 9,
+      "centroid_features": {
+        "pct_under18": 15.622222222222222,
+        "pct_65plus": 18.01111111111111,
+        "pct_non_german": 33.855555555555554,
+        "pct_migration_background": 42.9,
+        "population_density": 5645.444444444444,
+        "unemployment_rate": 4.251111111111111,
+        "pct_single_households": 39.18024691358025,
+        "pct_households_with_kids": 24.522222222222222,
+        "pct_single_parent_households": 28.113888888888887,
+        "avg_household_size": 1.8329502313826964
+      }
+    },
+    {
+      "cluster": 2,
+      "size": 10,
+      "centroid_features": {
+        "pct_under18": 12.92,
+        "pct_65plus": 15.19,
+        "pct_non_german": 27.92,
+        "pct_migration_background": 34.97166666666667,
+        "population_density": 10454.2,
+        "unemployment_rate": 3.862,
+        "pct_single_households": 40.11555555555556,
+        "pct_households_with_kids": 20.2025,
+        "pct_single_parent_households": 27.6575,
+        "avg_household_size": 1.644278511499434
+      }
+    }
+  ],
+  "districts": [
+    {
+      "district": "15 Trudering - Riem",
+      "district_key": "trudering-riem",
+      "year": 2024,
+      "features": {
+        "pct_under18": 19.0,
+        "pct_65plus": 16.0,
+        "pct_non_german": 25.6,
+        "pct_migration_background": 37.06666666666667,
+        "population_density": 3397.0,
+        "unemployment_rate": 4.2,
+        "pct_single_households": 38.044444444444444,
+        "pct_households_with_kids": 29.049999999999997,
+        "pct_single_parent_households": 28.625,
+        "avg_household_size": 2.073794096472282
+      },
+      "cluster": 0
+    },
+    {
+      "district": "21 Pasing - Obermenzing",
+      "district_key": "pasing-obermenzing",
+      "year": 2024,
+      "features": {
+        "pct_under18": 17.3,
+        "pct_65plus": 18.4,
+        "pct_non_german": 26.7,
+        "pct_migration_background": 33.291666666666664,
+        "population_density": 4959.0,
+        "unemployment_rate": 3.96,
+        "pct_single_households": 38.65555555555555,
+        "pct_households_with_kids": 27.2,
+        "pct_single_parent_households": 28.225,
+        "avg_household_size": 1.9323511001974096
+      },
+      "cluster": 0
+    },
+    {
+      "district": "22 Aubing - Lochhausen - Langwied",
+      "district_key": "aubing-lochhausen-langwied",
+      "year": 2024,
+      "features": {
+        "pct_under18": 21.0,
+        "pct_65plus": 15.5,
+        "pct_non_german": 34.6,
+        "pct_migration_background": 43.06666666666666,
+        "population_density": 1791.0,
+        "unemployment_rate": 4.5200000000000005,
+        "pct_single_households": 37.93333333333333,
+        "pct_households_with_kids": 32.65,
+        "pct_single_parent_households": 28.35,
+        "avg_household_size": 2.1205210551004945
+      },
+      "cluster": 0
+    },
+    {
+      "district": "23 Allach - Untermenzing",
+      "district_key": "allach-untermenzing",
+      "year": 2024,
+      "features": {
+        "pct_under18": 18.9,
+        "pct_65plus": 17.6,
+        "pct_non_german": 26.9,
+        "pct_migration_background": 33.24166666666667,
+        "population_density": 2345.0,
+        "unemployment_rate": 3.6399999999999997,
+        "pct_single_households": 37.93333333333333,
+        "pct_households_with_kids": 30.825,
+        "pct_single_parent_households": 28.025,
+        "avg_household_size": 2.0823040449569747
+      },
+      "cluster": 0
+    },
+    {
+      "district": "24 Feldmoching - Hasenbergl",
+      "district_key": "feldmoching-hasenbergl",
+      "year": 2024,
+      "features": {
+        "pct_under18": 18.0,
+        "pct_65plus": 17.8,
+        "pct_non_german": 35.2,
+        "pct_migration_background": 45.13333333333333,
+        "population_density": 2203.0,
+        "unemployment_rate": 4.6,
+        "pct_single_households": 38.43333333333334,
+        "pct_households_with_kids": 28.325,
+        "pct_single_parent_households": 28.8,
+        "avg_household_size": 2.018536649043796
+      },
+      "cluster": 0
+    },
+    {
+      "district": "07 Sendling - Westpark",
+      "district_key": "sendling-westpark",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.8,
+        "pct_65plus": 17.5,
+        "pct_non_german": 31.5,
+        "pct_migration_background": 40.125,
+        "population_density": 7964.0,
+        "unemployment_rate": 4.0600000000000005,
+        "pct_single_households": 39.544444444444444,
+        "pct_households_with_kids": 23.025,
+        "pct_single_parent_households": 27.9,
+        "avg_household_size": 1.7554364954301922
+      },
+      "cluster": 1
+    },
+    {
+      "district": "10 Moosach",
+      "district_key": "moosach",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.6,
+        "pct_65plus": 17.9,
+        "pct_non_german": 34.8,
+        "pct_migration_background": 43.80833333333334,
+        "population_density": 5049.0,
+        "unemployment_rate": 4.46,
+        "pct_single_households": 39.05555555555556,
+        "pct_households_with_kids": 24.625,
+        "pct_single_parent_households": 28.125,
+        "avg_household_size": 1.8492634580137126
+      },
+      "cluster": 1
+    },
+    {
+      "district": "11 Milbertshofen - Am Hart",
+      "district_key": "milbertshofen-am hart",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.0,
+        "pct_65plus": 15.3,
+        "pct_non_german": 43.6,
+        "pct_migration_background": 52.949999999999996,
+        "population_density": 5760.0,
+        "unemployment_rate": 4.34,
+        "pct_single_households": 39.333333333333336,
+        "pct_households_with_kids": 24.075,
+        "pct_single_parent_households": 28.275,
+        "avg_household_size": 1.8233364692720384
+      },
+      "cluster": 1
+    },
+    {
+      "district": "12 Schwabing - Freimann",
+      "district_key": "schwabing-freimann",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.4,
+        "pct_65plus": 16.0,
+        "pct_non_german": 30.8,
+        "pct_migration_background": 38.75,
+        "population_density": 3003.0,
+        "unemployment_rate": 3.7,
+        "pct_single_households": 39.611111111111114,
+        "pct_households_with_kids": 23.0,
+        "pct_single_parent_households": 28.15,
+        "avg_household_size": 1.7610913052089523
+      },
+      "cluster": 1
+    },
+    {
+      "district": "13 Bogenhausen",
+      "district_key": "bogenhausen",
+      "year": 2024,
+      "features": {
+        "pct_under18": 16.8,
+        "pct_65plus": 19.2,
+        "pct_non_german": 29.1,
+        "pct_migration_background": 36.7,
+        "population_density": 4026.0,
+        "unemployment_rate": 3.7800000000000002,
+        "pct_single_households": 39.044444444444444,
+        "pct_households_with_kids": 24.95,
+        "pct_single_parent_households": 28.175,
+        "avg_household_size": 1.8568210362632325
+      },
+      "cluster": 1
+    },
+    {
+      "district": "14 Berg am Laim",
+      "district_key": "berg am laim",
+      "year": 2024,
+      "features": {
+        "pct_under18": 16.0,
+        "pct_65plus": 16.8,
+        "pct_non_german": 35.1,
+        "pct_migration_background": 45.90833333333333,
+        "population_density": 7500.0,
+        "unemployment_rate": 5.3,
+        "pct_single_households": 39.44444444444444,
+        "pct_households_with_kids": 24.675,
+        "pct_single_parent_households": 27.7,
+        "avg_household_size": 1.785819449825649
+      },
+      "cluster": 1
+    },
+    {
+      "district": "16 Ramersdorf - Perlach",
+      "district_key": "ramersdorf-perlach",
+      "year": 2024,
+      "features": {
+        "pct_under18": 17.1,
+        "pct_65plus": 19.4,
+        "pct_non_german": 36.5,
+        "pct_migration_background": 49.175000000000004,
+        "population_density": 6070.0,
+        "unemployment_rate": 5.08,
+        "pct_single_households": 38.75555555555556,
+        "pct_households_with_kids": 26.424999999999997,
+        "pct_single_parent_households": 28.424999999999997,
+        "avg_household_size": 1.9259603924833881
+      },
+      "cluster": 1
+    },
+    {
+      "district": "19 Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln",
+      "district_key": "thalkirchen-obersendling-forstenried-fürstenried-solln",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.8,
+        "pct_65plus": 19.2,
+        "pct_non_german": 31.5,
+        "pct_migration_background": 37.80833333333333,
+        "population_density": 5839.0,
+        "unemployment_rate": 3.9799999999999995,
+        "pct_single_households": 39.06666666666667,
+        "pct_households_with_kids": 25.0,
+        "pct_single_parent_households": 28.125,
+        "avg_household_size": 1.8405308307060635
+      },
+      "cluster": 1
+    },
+    {
+      "district": "20 Hadern",
+      "district_key": "hadern",
+      "year": 2024,
+      "features": {
+        "pct_under18": 15.1,
+        "pct_65plus": 20.8,
+        "pct_non_german": 31.8,
+        "pct_migration_background": 40.875,
+        "population_density": 5598.0,
+        "unemployment_rate": 3.56,
+        "pct_single_households": 38.766666666666666,
+        "pct_households_with_kids": 24.925,
+        "pct_single_parent_households": 28.150000000000002,
+        "avg_household_size": 1.8982926452410382
+      },
+      "cluster": 1
+    },
+    {
+      "district": "01 Altstadt - Lehel",
+      "district_key": "altstadt-lehel",
+      "year": 2024,
+      "features": {
+        "pct_under18": 11.8,
+        "pct_65plus": 16.0,
+        "pct_non_german": 25.3,
+        "pct_migration_background": 32.266666666666666,
+        "population_density": 6636.0,
+        "unemployment_rate": 3.1,
+        "pct_single_households": 40.400000000000006,
+        "pct_households_with_kids": 18.1,
+        "pct_single_parent_households": 27.475,
+        "avg_household_size": 1.5919721871049304
+      },
+      "cluster": 2
+    },
+    {
+      "district": "02 Ludwigsvorstadt - Isarvorstadt",
+      "district_key": "ludwigsvorstadt-isarvorstadt",
+      "year": 2024,
+      "features": {
+        "pct_under18": 11.3,
+        "pct_65plus": 12.1,
+        "pct_non_german": 26.5,
+        "pct_migration_background": 31.375,
+        "population_density": 11378.0,
+        "unemployment_rate": 3.6799999999999997,
+        "pct_single_households": 40.51111111111111,
+        "pct_households_with_kids": 17.625,
+        "pct_single_parent_households": 27.650000000000002,
+        "avg_household_size": 1.569558209151617
+      },
+      "cluster": 2
+    },
+    {
+      "district": "03 Maxvorstadt",
+      "district_key": "maxvorstadt",
+      "year": 2024,
+      "features": {
+        "pct_under18": 10.2,
+        "pct_65plus": 12.0,
+        "pct_non_german": 26.8,
+        "pct_migration_background": 32.75833333333333,
+        "population_density": 12199.0,
+        "unemployment_rate": 3.3600000000000003,
+        "pct_single_households": 40.81111111111111,
+        "pct_households_with_kids": 16.125,
+        "pct_single_parent_households": 27.400000000000002,
+        "avg_household_size": 1.510476248738262
+      },
+      "cluster": 2
+    },
+    {
+      "district": "05 Au - Haidhausen",
+      "district_key": "au-haidhausen",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.1,
+        "pct_65plus": 14.5,
+        "pct_non_german": 23.9,
+        "pct_migration_background": 32.208333333333336,
+        "population_density": 15159.0,
+        "unemployment_rate": 3.72,
+        "pct_single_households": 39.922222222222224,
+        "pct_households_with_kids": 20.875,
+        "pct_single_parent_households": 27.8,
+        "avg_household_size": 1.6810872996762716
+      },
+      "cluster": 2
+    },
+    {
+      "district": "06 Sendling",
+      "district_key": "sendling",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.1,
+        "pct_65plus": 14.9,
+        "pct_non_german": 28.0,
+        "pct_migration_background": 35.233333333333334,
+        "population_density": 10409.0,
+        "unemployment_rate": 4.279999999999999,
+        "pct_single_households": 40.05555555555556,
+        "pct_households_with_kids": 20.525,
+        "pct_single_parent_households": 27.475,
+        "avg_household_size": 1.643508858066364
+      },
+      "cluster": 2
+    },
+    {
+      "district": "08 Schwanthalerhöhe",
+      "district_key": "schwanthalerhöhe",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.1,
+        "pct_65plus": 13.1,
+        "pct_non_german": 32.0,
+        "pct_migration_background": 40.59166666666667,
+        "population_density": 13855.0,
+        "unemployment_rate": 4.5600000000000005,
+        "pct_single_households": 40.12222222222223,
+        "pct_households_with_kids": 20.575,
+        "pct_single_parent_households": 27.875,
+        "avg_household_size": 1.6504360039796337
+      },
+      "cluster": 2
+    },
+    {
+      "district": "09 Neuhausen - Nymphenburg",
+      "district_key": "neuhausen-nymphenburg",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.8,
+        "pct_65plus": 16.8,
+        "pct_non_german": 26.5,
+        "pct_migration_background": 35.425000000000004,
+        "population_density": 7890.0,
+        "unemployment_rate": 3.5,
+        "pct_single_households": 39.7,
+        "pct_households_with_kids": 22.975,
+        "pct_single_parent_households": 27.849999999999998,
+        "avg_household_size": 1.7276940500043558
+      },
+      "cluster": 2
+    },
+    {
+      "district": "17 Obergiesing - Fasangarten",
+      "district_key": "obergiesing-fasangarten",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.8,
+        "pct_65plus": 15.4,
+        "pct_non_german": 32.8,
+        "pct_migration_background": 40.108333333333334,
+        "population_density": 9501.0,
+        "unemployment_rate": 3.78,
+        "pct_single_households": 39.888888888888886,
+        "pct_households_with_kids": 22.45,
+        "pct_single_parent_households": 27.375,
+        "avg_household_size": 1.690178110480124
+      },
+      "cluster": 2
+    },
+    {
+      "district": "18 Untergiesing - Harlaching",
+      "district_key": "untergiesing-harlaching",
+      "year": 2024,
+      "features": {
+        "pct_under18": 14.0,
+        "pct_65plus": 18.9,
+        "pct_non_german": 25.7,
+        "pct_migration_background": 31.541666666666668,
+        "population_density": 6710.0,
+        "unemployment_rate": 4.0,
+        "pct_single_households": 39.833333333333336,
+        "pct_households_with_kids": 21.825,
+        "pct_single_parent_households": 27.700000000000003,
+        "avg_household_size": 1.7021992818671454
+      },
+      "cluster": 2
+    },
+    {
+      "district": "25 Laim",
+      "district_key": "laim",
+      "year": 2024,
+      "features": {
+        "pct_under18": 13.0,
+        "pct_65plus": 18.2,
+        "pct_non_german": 31.7,
+        "pct_migration_background": 38.208333333333336,
+        "population_density": 10805.0,
+        "unemployment_rate": 4.64,
+        "pct_single_households": 39.91111111111111,
+        "pct_households_with_kids": 20.95,
+        "pct_single_parent_households": 27.974999999999998,
+        "avg_household_size": 1.6756748659256375
+      },
+      "cluster": 2
+    }
+  ]
+}
